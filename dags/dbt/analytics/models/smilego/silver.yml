@@ -1,0 +1,38 @@
+version: 2
+
+sources:
+  - name: silver
+    description: "Recebe os dados crus da Smilego assim como eles estão na fonte."
+    schema: "silver"
+    tables:
+      - name: proposta
+        description: "Informações da Proposta"
+        columns:
+          - name: id
+            description: "Identificador da Proposta"
+            tests:
+              - unique
+              - not_null
+          - name: origemComercial
+            description: "Identificador da origem comercial"
+          - name: produto
+            description: "identificador da proposta"
+          - name: status
+            description: "Status da proposta"
+          - name: usuario
+            description: "Identificador do usuário"
+          - name: fluxo
+            description: "Identificador do Fluxo"
+          - name: data
+            description: "Data de Cadastro da Proposta"
+            tests:
+              - not_null
+          - name: dataDecisao
+            description: "Data de Decisão da Proposta"
+            tests:
+              - not_null
+          - name: reenviosSmsTac
+            description: "Quantidade de reenvios SMS"
+          - name: marcadores
+            description: "Marcadores da proposta"
+      

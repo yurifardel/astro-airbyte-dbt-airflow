@@ -39,10 +39,10 @@ def token_generator_api():
         'X-TENANT-ID': cliente,
         'Content-Type': 'application/json',
         'Accept': 'application/json, text/plain, */*',
-        'Referer': f'https://cartotenda.onboarding.smilego.io/'
+        'Referer': f'https://{cliente}.onboarding.smilego.io/'
     }
 
-    response = requests.post(f'{url}/autenticacao/tokens', json=credentials, headers=header)
+    response = requests.post(f'{url}/auth/tokens', json=credentials, headers=header)
 
     token = response.json()
 
@@ -69,7 +69,7 @@ def token_generator_airbyte():
         "content-type": "application/json"
     }
 
-    response = requests.post(f'{url}/applications/token', json=payload, headers=headers)
+    response = requests.post(f'{url}/token', json=payload, headers=headers)
 
     token = response.json()
 

@@ -36,7 +36,6 @@ def token_generator_api():
     }
 
     header = {
-        'X-TENANT-ID': cliente,
         'Content-Type': 'application/json',
         'Accept': 'application/json, text/plain, */*',
         'Referer': f''

@@ -39,7 +39,7 @@ def token_generator_api():
         'X-TENANT-ID': cliente,
         'Content-Type': 'application/json',
         'Accept': 'application/json, text/plain, */*',
-        'Referer': f'https://{cliente}.onboarding.smilego.io/'
+        'Referer': f''
     }
 
     response = requests.post(f'{url}/auth/tokens', json=credentials, headers=header)
